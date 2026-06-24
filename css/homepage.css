@@ -107,128 +107,243 @@
   padding-bottom: 50px !important;
 }
 
+/* =============================================
+   LAB CARDS - Symmetrical 3-col Hover Drawer
+   ============================================= */
+
+.homepage .labs-grid {
+  margin-top: 10px;
+}
+
+/* Each column adds bottom spacing */
+.homepage .labs-grid > [class*="col-"] {
+  margin-bottom: 28px;
+}
+
+/* The card wrapper: fixed square, clipped, relative */
 .homepage .lab-card-wrapper {
-  background: #ffffff;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-subtle);
-  margin-bottom: 30px;
-  display: flex;
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 10px;
   overflow: hidden;
-  height: 250px;
-  transition: all var(--transition-speed) ease;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
 }
 
 .homepage .lab-card-wrapper:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--primary-color);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+  transform: translateY(-4px);
 }
 
-.homepage .lab-card-img {
-  width: 32%;
-  min-width: 140px;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  border-right: 1px solid var(--border-color);
+/* --- FACE: full-bleed image background --- */
+.homepage .lab-card-face {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
-.homepage .lab-card-img img {
+.homepage .lab-card-face img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-speed) ease;
+  display: block;
+  transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.homepage .lab-card-wrapper:hover .lab-card-img img {
-  transform: scale(1.06);
+.homepage .lab-card-wrapper:hover .lab-card-face img {
+  transform: scale(1.07);
 }
 
-.homepage .lab-card-content {
-  width: 68%;
-  padding: 24px;
+/* Gradient scrim so the title bar is readable */
+.homepage .lab-card-face::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 25, 40, 0.82) 0%,
+    rgba(15, 25, 40, 0.18) 55%,
+    transparent 100%
+  );
+  transition: opacity 0.35s ease;
+  z-index: 2;
+}
+
+.homepage .lab-card-wrapper:hover .lab-card-face::after {
+  opacity: 0.3; /* fade scrim when drawer opens so image still feels present */
+}
+
+/* --- Title bar: always visible at bottom --- */
+.homepage .lab-card-title-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  color: #ffffff;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.35s ease;
+}
+
+.homepage .lab-card-title-bar i {
+  font-size: 18px;
+  color: var(--primary-color);
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.4));
+}
+
+.homepage .lab-card-title-bar span {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  line-height: 1.3;
+}
+
+/* Slide title bar out of view when drawer opens */
+.homepage .lab-card-wrapper:hover .lab-card-title-bar {
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --- Drawer: slide-up description panel --- */
+.homepage .lab-card-drawer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: 4;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.97);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 0 0 10px 10px;
+  transition: height 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.homepage .lab-card-wrapper:hover .lab-card-drawer {
+  height: 100%;
+}
+
+/* Inner content of drawer */
+.homepage .lab-card-drawer-inner {
+  padding: 26px 22px 20px;
   display: flex;
   flex-direction: column;
+  height: 100%;
   justify-content: center;
-  overflow: hidden;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.3s ease 0.08s,
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.08s;
 }
 
-.homepage .lab-card-content .media.service-box {
-  margin: 0;
+.homepage .lab-card-wrapper:hover .lab-card-drawer-inner {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.homepage .lab-card-content .media-body a {
-  display: inline-block;
-  margin-bottom: 6px;
-  text-decoration: none;
-}
-
-.homepage .lab-card-content .media-body h4 {
-  margin: 0;
-  font-weight: 600;
-  font-size: 17px;
+.homepage .lab-card-drawer-inner h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 700;
   color: var(--text-dark);
-  transition: color var(--transition-speed) ease;
+  line-height: 1.3;
 }
 
-.homepage .lab-card-content .media-body a:hover h4 {
+.homepage .lab-card-drawer-inner h4 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.homepage .lab-card-drawer-inner h4 a:hover {
   color: var(--primary-color);
 }
 
-.homepage .lab-card-content .media-body h4 i font {
-  font-style: normal;
+.homepage .lab-card-drawer-inner p {
+  margin: 0 0 14px;
   font-size: 13px;
-  font-weight: 400;
-  margin-left: 6px;
-}
-
-.homepage .lab-card-content p {
-  margin: 0;
-  font-size: 13.5px;
-  line-height: 21px;
+  line-height: 20px;
   color: var(--text-muted);
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  overflow-y: auto;
+  max-height: 130px;
 }
 
-.homepage .lab-card-content .pull-left {
-  margin-right: 16px;
+/* Scrollbar styling for longer lab descriptions */
+.homepage .lab-card-drawer-inner p::-webkit-scrollbar {
+  width: 3px;
+}
+.homepage .lab-card-drawer-inner p::-webkit-scrollbar-track {
+  background: transparent;
+}
+.homepage .lab-card-drawer-inner p::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
 }
 
-.homepage .lab-card-content .pull-left > i {
-  width: 46px;
-  height: 46px;
-  line-height: 46px;
-  font-size: 18px;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 1px #ebebeb;
+/* "Explore Lab" CTA link */
+.homepage .lab-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-top: auto;
+  transition: gap 0.25s ease, color 0.25s ease;
 }
 
-.homepage .lab-card-content .pull-left > i:after {
-  display: none !important;
+.homepage .lab-read-more:hover {
+  color: var(--primary-hover);
+  gap: 10px;
+}
+
+.homepage .lab-read-more i {
+  font-size: 11px;
+  transition: transform 0.25s ease;
+}
+
+.homepage .lab-read-more:hover i {
+  transform: translateX(3px);
+}
+
+/* --- Responsive --- */
+@media (max-width: 991px) {
+  .homepage .lab-card-wrapper {
+    height: 260px;
+  }
 }
 
 @media (max-width: 767px) {
+  /* On mobile, make touch-friendly: drawer always visible at 50% height */
   .homepage .lab-card-wrapper {
-    flex-direction: column;
-    height: auto;
-    margin-bottom: 25px;
+    height: 280px;
   }
-  .homepage .lab-card-img {
-    width: 100%;
-    height: 180px;
-    border-right: 0;
-    border-bottom: 1px solid var(--border-color);
+  .homepage .lab-card-drawer {
+    height: 52% !important;
   }
-  .homepage .lab-card-content {
-    width: 100%;
-    padding: 20px;
+  .homepage .lab-card-drawer-inner {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
   }
-  .homepage .lab-card-content p {
-    -webkit-line-clamp: unset;
+  .homepage .lab-card-title-bar {
+    transform: translateY(-52%) !important;
+    opacity: 1 !important;
+  }
+  .homepage .lab-card-face::after {
+    opacity: 0.5 !important;
+  }
+  .homepage .labs-grid > [class*="col-"] {
+    margin-bottom: 18px;
   }
 }
 
