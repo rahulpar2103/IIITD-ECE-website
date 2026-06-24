@@ -1,0 +1,2214 @@
+<!--libraries block-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--libraries block ends-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--style block-->
+<style id="mainStyle">
+body{
+background-color: #232323;
+}
+#mainBlockContainer{
+	background-color: #232323;
+	display:table;
+	width:100%;
+	font-family: 'Open Sans', sans-serif;
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+	margin:0px;
+	padding:0px;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000\9;
+    background-color: #fff;
+    border: none;
+	opacity: 0.5;
+    border-radius: 0px; 
+	}
+
+.carousel-indicators .active {
+    width: 30px;
+    height: 3px;
+    margin: 1px;
+	opacity: 1;
+    background-color: #ffb32f ;
+	}
+
+#contentBlock1 .item{
+	height:100vh !important;
+	max-width:100% !important;
+	width:100vw;
+	background-size: cover;
+}
+#contentBlock8 ,#contentBlock6,#contentBlock5{
+	height:100vh !important;
+	max-width:100% !important;
+	background-repeat: round;
+}
+#contentBlock9,#contentBlock10 .textcol {
+	height:100vh !important;
+	max-width:100% !important;
+	background-repeat: round;
+}
+#contentBlock2 .blockimage1{
+	height:100vh !important;
+	max-width:100% !important;
+	background-repeat: round;
+}
+#contentBlock3 .blockimage2{
+	height:100vh !important;
+	max-width:100% !important;
+	background-repeat: round;
+}
+.blockimage1{
+	background-image: url("http://themetrading.com/html/runaway/template/regular/images/slider/01.jpg");
+}
+.blockimage2{
+	background-image: url("http://themetrading.com/html/runaway/template/regular/images/slider/01.jpg");
+}
+.cimage2{
+	background-image: url("images/hp1.jpg");
+}
+.cimage1{
+	background-image: url("images/hp1.webp");
+}
+.cimage3{
+	background-image: url("https://iiitd.ac.in/sites/default/files/images/labs/electromagnetic-spectrum.jpg");
+}
+#menuBar{
+	display:table-cell;
+	width:150px;
+	vertical-align: top;
+	padding: 50px 0px;
+}
+#menuBar img{
+    margin: 0 auto;
+    display: block;
+	width: 150px;
+    padding: 10px;
+}
+#descriptionBar{
+	display:table-cell;
+	position:relative;
+}
+
+.navigation {
+  width: 150px;
+}
+
+.mainmenu, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.mainmenu a {
+  display: block;
+  text-decoration: none;
+  padding: 5px 20px;
+  color: #fff;
+}
+
+.mainmenu a:hover {
+    color: #ffb32f;
+}
+
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 200px;
+}
+
+.submenu a {
+  background-color: #3a3939;
+}
+
+
+.submenu a:hover {
+  background-color: #232323;
+}
+
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+.caption{
+	padding: 10% 10% 0% 10%;
+    color: white;
+	width: 50%;
+	float:left;
+}
+#labDiagram{
+	float: right;
+    width: 50%;
+    margin-top: 10%;
+}
+
+.btn {
+    padding: 10px 30px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 0px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn-default {
+    background-color: #ffb32f;
+    color: #fff;
+	border:none;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+.btn-default:hover{
+	background-color:#1e283c!important;
+	color:#fff;
+}
+.carDesc{
+	padding:20px 0px;
+}
+.fDark{
+	color:#000;
+}
+  
+#sectionControl{ 
+	position: absolute;
+    right: 20px;
+	top:30%;
+	z-index: 10;
+}
+#contactControl{
+	position: absolute;
+    right: 5px;
+	padding:10px;
+	top:5%;
+	z-index: 10;
+	background-color: #232323;
+}
+.selectionPointer{
+	border: 2px solid #ffb32f;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+	margin: 8px!important;
+}
+.sectionPointer{
+    height: 15px;
+    width: 15px;
+	margin: 10px;
+}
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 3px;
+  display: inline-block;
+}
+/*
+#labDiagram img {
+		-webkit-animation: rotation 60s infinite linear;
+}
+*/
+@-webkit-keyframes rotation {
+		0% {
+				-webkit-transform: rotate(0deg);
+		}
+		10% {
+				-webkit-transform: rotate(0deg);
+		}
+		13% {
+				-webkit-transform: rotate(60deg);
+		}
+		26% {
+				-webkit-transform: rotate(60deg);
+		}
+		29% {
+				-webkit-transform: rotate(120deg);
+		}
+		42% {
+				-webkit-transform: rotate(120deg);
+		}
+		45% {
+				-webkit-transform: rotate(180deg);
+		}
+		58% {
+				-webkit-transform: rotate(180deg);
+		}
+		61% {
+				-webkit-transform: rotate(240deg);
+		}
+		74% {
+				-webkit-transform: rotate(240deg);
+		}
+		77% {
+				-webkit-transform: rotate(300deg);
+		}
+		94% {
+				-webkit-transform: rotate(300deg);
+		}
+		97% {
+				-webkit-transform: rotate(360deg);
+		}
+		100% {
+				-webkit-transform: rotate(360deg);
+		}
+}
+#labInfoBlock{
+	position:relative;
+	margin:0 auto;
+}
+.labInfo{
+	text-align:center;
+	border: 2px solid #ffb32f;
+	border-radius:7px;
+	background:white;
+	width: 60%;
+    padding: 10px;
+    margin: 0 auto;
+	display:none;
+}
+.tableView{
+	display:table;
+}
+
+.tabular-3{
+	width:33%;
+	display:table-cell;
+}
+.textCol{
+	color:white;
+	font-family: 'Open Sans', sans-serif;
+	padding: 2%;
+    vertical-align: middle;
+}
+.textCol div{
+	color:#818181;
+	line-height:20px;
+}
+.textCol p,.textCol span{
+	color:#e1e1e1;
+}
+.formData{
+	line-height:40px !important;
+}
+.contentBlock{
+	background-color:#232323;
+	height:auto !important;
+	max-width:100% !important;
+	background-repeat: round;
+}
+.tabular-3 img{
+	padding:10px 0px;
+}
+.alignTop{
+	vertical-align: top!important;
+}
+
+#facilitiesCarousel .item.left.active,#policiesCarousel .item.left.active,#teamCarousel .item.left.active {
+  transform: translateX(-33%);
+}
+#facilitiesCarousel  .item.right.active,#policiesCarousel  .item.right.active ,#teamCarousel  .item.right.active{
+  transform: translateX(33%);
+}
+
+#facilitiesCarousel  .item.next ,#policiesCarousel  .item.next,#teamCarousel  .item.next {
+  transform: translateX(33%)
+}
+#facilitiesCarousel  .item.prev,#policiesCarousel  .item.prev,#teamCarousel  .item.prev {
+  transform: translateX(-33%)
+}
+
+#feedbackCarousel  .item.next  {
+  transform: translateX(50%)
+}
+#feedbackCarousel  .item.prev {
+  transform: translateX(-50%)
+}
+#feedbackCarousel .item.left.active {
+  transform: translateX(-50%);
+}
+#feedbackCarousel  .item.right.active{
+  transform: translateX(50%);
+}
+
+#facilitiesCarousel  .item.right,
+#facilitiesCarousel  .item.left ,#policiesCarousel  .item.right,
+#policiesCarousel  .item.left,#feedbackCarousel  .item.right,
+#feedbackCarousel  .item.left,#teamCarousel .item.right,
+#teamCarousel .item.left{ 
+  transform: translateX(0);
+}
+
+#facilitiesCarousel .carousel-control.left,
+#facilitiesCarousel .carousel-control.right,#policiesCarousel .carousel-control.left,
+#policiesCarousel .carousel-control.right ,#feedbackCarousel .carousel-control.left,
+#feedbackCarousel .carousel-control.right ,#teamCarousel .carousel-control.left,
+#teamCarousel .carousel-control.right{background-image:none;}
+
+.factcontainer,.policiescontainer,.gallerycontainer,.feedbackcontainer,.teamcontainer{
+	padding: 2%;
+}
+.factcontainer h2,.policiescontainer h2,.gallerycontainer h2,.feedbackcontainer h2,.teamcontainer h2{
+	color:#fff;
+	font-weight: bolder;
+}
+
+.factcontainer p,.policiescontainer p,.gallerycontainer p,.feedbackcontainer p,.teamcontainer p{
+	width: 50%;
+}
+.tileCard p{
+	width: 100%!important;
+	padding: 5% 10%;
+	color: #818181;
+}
+#facilitiesCarousel .tileCard{
+	border-radius: 10px;
+    background-color: #232323;
+    height: 400px;
+	margin: 5% 12%;
+	text-align: center;
+	text-decoration:none!important;
+}
+#teamCarousel .tileCard{
+	border-radius: 10px;
+    background-color: #232323;
+	margin: 5% 12%;
+	text-align: center;
+	text-decoration:none!important;
+}
+#policiesCarousel .tileCard{
+	border-radius: 10px;
+    background-color: #232323;
+    height: 470px;
+	margin: 5%;
+	text-align: center;
+	text-decoration:none!important;
+}
+#feedbackCarousel .tileCard{
+	border-radius: 10px;
+    background-color: #232323;
+    height: 250px;
+	margin: 100px 20px 20px 20px;
+	text-align: left;
+	text-decoration:none!important;
+}
+#feedbackCarousel .tileCard p{
+    width: 100%!important;
+    padding: 20px;
+    color: #818181;
+}
+a{
+text-decoration:none!important;
+}
+.tileCard:hover{
+	border:2px solid #818181;
+}
+.iconSymbol{
+    background-color: #ffb32f;
+    font-size: 50px;
+    border: 7px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+}
+#facilitiesCarousel .tileCard h2{
+    font-size: 24px;
+    margin: 10px 0px 0px 0px;
+	}
+#teamCarousel .tileCard h2{
+    font-size: 24px;
+    margin: 10px 0px 0px 0px;
+	}
+#policiesCarousel .tileCard h2{
+    font-size: 24px;
+    padding: 20px 0px 0px 0px;
+	}
+#policiesCarousel .tileCard h1{
+	color:#ffb32f;
+	}
+#feedbackCarousel .tileCard h2{
+    font-size: 20px;
+    padding: 0px 0px 0px 20px;
+	margin:10px 0px;
+	}
+#feedbackCarousel .tileCard .star{
+    font-size: 20px;
+    padding: 0px 0px 0px 20px;
+	color:#ffb32f;
+	}
+#feedbackCarousel .tileCard h1{
+	color:#ffb32f;
+	}
+.left,.right{
+	height:60px;
+	opacity:1;
+	display:none;
+}
+
+.arrow{
+	font-size: 20px;
+}
+.tag {
+       position: absolute;
+       left: 5%;
+       top: 35%;
+       z-index: 1000;
+       padding: 5px;
+    }
+.pformData{
+	border-bottom:2px solid #818181;
+	margin:0px 10px;
+	line-height:36px!important;
+}
+.dwnload{
+	position: absolute;
+    bottom: 36px;
+    left: 0;
+    right: 0;
+}
+.gallerynav{
+	display:inline-block;
+	text-transform:uppercase;
+	padding:5px 10px;
+	font-weight:600;
+	color:#e1e1e1;
+	font-size:14px;
+}
+.selected{
+	color:#ffb32f!important;
+}
+#gallerysite .col-md-4{
+	padding:10px;
+	position:relative;
+}
+#gallerycontrol{
+	margin:40px 0px 20px 0px;
+}
+.overlay{
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+	background-color:#000;
+	border:10px solid #ffb32f;
+	-webkit-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+	-webkit-transform: scale(0,0);
+    -ms-transform: scale(0,0);
+    -moz-transform: scale(0,0);
+    -o-transform: scale(0,0);
+    transform: scale(0,0);
+}
+#teamCarousel .overlay{
+	position: absolute;
+    left: 0px;
+    top: 0px;
+	margin: 5% 12%;
+    width: 76%;
+    height: 90%;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+	background-color:#000;
+	border:none;
+	-webkit-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+	-webkit-transform: scale(0,0);
+    -ms-transform: scale(0,0);
+    -moz-transform: scale(0,0);
+    -o-transform: scale(0,0);
+    transform: scale(0,0);
+}
+#teamCarousel .overlaymask{
+	position: absolute;
+    left: 0px;
+    top: 0px;
+	margin: 5% 12%;
+    width: 76%;
+    height: 90%;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+	background-color:transparent;
+	border:none;
+	-webkit-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+	-webkit-transform: scale(0,0);
+    -ms-transform: scale(0,0);
+    -moz-transform: scale(0,0);
+    -o-transform: scale(0,0);
+    transform: scale(0,0);
+}
+#gallerysite .col-md-4:hover .overlay{
+	-webkit-transform: scale(1,1);
+    -ms-transform: scale(1,1);
+    -o-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    transform: scale(1,1);
+    opacity: 0.85;
+    visibility: visible;
+}
+#teamCarousel .col-md-4:hover .overlay{
+	-webkit-transform: scale(1,1);
+    -ms-transform: scale(1,1);
+    -o-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    transform: scale(1,1);
+    opacity: 0.35;
+    visibility: visible;
+}
+#teamCarousel .col-md-4:hover .overlaymask{
+	-webkit-transform: scale(1,1);
+    -ms-transform: scale(1,1);
+    -o-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    transform: scale(1,1);
+    opacity: 1;
+    visibility: visible;
+}
+.overlay .eye{
+	top: 45%;
+    left: 48%;
+    position: absolute;
+    font-size: 24px;
+    color: white;
+}
+.overlay .filterval{
+	bottom:0;
+    position: absolute;
+    font-size: 16px;
+	font-weight:600px;
+	padding:10px;
+    color: white;
+}
+#gallerycontrol div{
+	cursor:pointer;
+}
+#gallerysite .col-md-4{
+	-webkit-transform: scale(1,1) translate(0px,0px);
+    -ms-transform: scale(1,1) translate(0px,0px);
+    -o-transform: scale(1,1) translate(0px,0px);
+    -moz-transform: scale(1,1) translate(0px,0px);
+    transform: scale(1,1) translate(0px,0px);
+	-webkit-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+	
+}
+#gallerysite .col-md-4.active{
+	-webkit-transform: scale(0,0);
+    -ms-transform: scale(0,0);
+    -moz-transform: scale(0,0);
+    -o-transform: scale(0,0);
+    transform: scale(0,0);
+}
+.feedbackimage{
+	margin:20px 30px;
+}
+.feedbackimage img{
+	width:100px;
+	height:100px;
+	border-radius:50%;
+}
+.teamname{
+background-color:ffb32f;
+color:#2e2e2e;
+text-align:left;
+position:absolute;
+width:190px;
+margin: -30% -20%;
+padding: 10px;
+letter-spacing:1px;
+font-weight:bold;
+-webkit-transform: rotate(270deg);
+-ms-transform:  rotate(270deg);
+-moz-transform:  rotate(270deg);
+-o-transform:  rotate(270deg);
+transform:  rotate(270deg);
+}
+.tdesi{
+background-color:#1e283c;
+color:#fff!important;
+text-align:left;
+position:absolute;
+width:190px;
+letter-spacing:1px;
+font-weight:bold;
+margin: -30% -10%;
+padding: 10px;
+-webkit-transform: rotate(270deg);
+-ms-transform:  rotate(270deg);
+-moz-transform:  rotate(270deg);
+-o-transform:  rotate(270deg);
+transform:  rotate(270deg);
+}
+#teamCarousel .col-md-4:hover .tdesi,#teamCarousel .col-md-4:hover .teamname{
+	display:none;
+}
+#teamCarousel .tileCard:hover{
+	border:none;
+}
+.teamolay{
+height: 92%;
+    border: 4px solid white;
+    margin: 10px;
+    opacity: 1;
+    text-align: center;
+}
+.teamolay .maskname{
+	font-size:18px;
+	font-weight:800;
+	color:#ffb32f;
+	margin:10px 0px;
+}
+.teamolay .maskdesc,.teamolay .maskdesi{
+	color:#e1e1e1;
+	font-size:14px;
+	margin:5px 0px;
+}
+.teamolay .maskdesc{
+	color:#e1e1e1;
+	font-size:14px;
+	margin:5px 0px 10px 0px;
+}
+.teamolay i{
+	font-size:12px;
+}
+#contentBlock10 h2{
+	font-weight:bolder;
+	margin:5%;
+}
+#contentBlock10 p{
+	margin:5% 5% 10% 5%;
+}
+.contact{
+	margin:5%;
+	display:table;
+}
+.inblock{
+	display:table-cell;
+	padding: 5px;
+    vertical-align: top;
+}
+
+.contact .heading{
+	font-weight:bolder;
+	color:white;
+	line-height:20px;
+}
+.formbox{
+	margin:10% 0%;
+	height:40%;
+	}
+.formbox input,.formbox textarea{
+	background: transparent;
+    border: none;
+	border-bottom:1px solid #e1e1e1;
+	margin:2% 1%;
+	line-height:30px;
+	padding:10px;
+}
+.formbox .firstline input{
+	width:40%;
+}
+.formbox .secondline input,.formbox .thirdline textarea{
+	width:82%;
+}
+#submitform{
+	color:#fff;
+	margin:4% 1%;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 10; 
+  padding-top: 20%; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.78); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#videoblock{
+	padding:10px;
+	background-color:#232323;
+}
+#videoblock .vhead{
+	color:#ffb32f;
+	letter-spacing:1px;
+	font-weight:bolder;
+	font-size:24px;
+	margin:20px 0px;
+}
+#videoblock p{
+	width:100%;
+	letter-spacing:1px;
+	line-height:20px;
+}
+#videobox{
+	padding:20px;
+}
+#videobox{
+	padding:20px;
+}
+#videobox img{
+	width:100%;
+}
+.popupplay{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    line-height: 90px;
+    text-align: center;
+    border-radius: 50%;
+    top: 40%;
+    left: 40%;
+    z-index: 222;
+	color:#fff;
+	background-color:#1e283c;
+}
+.popupplay i{
+    font-size: 30px;
+    margin: 25px 0px 0px 10px;
+	}
+.popupplay:hover{
+	color:#fff!important;
+}
+.panime{
+	position: absolute;
+    left: 40%;
+    top: 40%;
+    z-index: 11;
+}
+.multidiv{
+	position:relative;
+}
+.multidiv>div{
+	background-color: #1e283c;
+}
+.multidiv div{
+    border-radius: 100%;
+    margin: 2px;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    left: -30px;
+    top: -30px;
+    width: 140px;
+    height: 140px;
+    -webkit-animation: ball-scale-multiple 3s 0s linear infinite;
+    animation: ball-scale-multiple 3s 0s linear infinite;
+}
+@-webkit-keyframes ball-scale-multiple {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0; }
+  5% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+
+@keyframes ball-scale-multiple {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0; }
+  5% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+
+  .multidiv > div:nth-child(2) {
+    -webkit-animation-delay: -0.4s;
+            animation-delay: -0.4s; }
+  .ball-scale-multiple > div:nth-child(3) {
+    -webkit-animation-delay: -0.2s;
+            animation-delay: -0.2s; }
+			
+.popup__overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(45, 45, 45, 0.95);
+  text-align: center;
+  z-index: 100;
+}
+
+.popup__overlay:after {
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  vertical-align: middle;
+  content: "";
+}
+
+.popup {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  max-height: 480px;
+  padding: 20px;
+  color: white;
+  vertical-align: middle;
+}
+
+.popup-form__row {
+  margin: 1em 0;
+}
+
+.popup__close {
+  display: block;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 12px;
+  height: 12px;
+  padding: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 24px;
+  line-height: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.popup__close:hover {
+  color: #eea200;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+.mainmenu .selected a{
+		color:#ffb32f !important;
+}
+#centerBlock {
+	position: relative;
+	margin:0 auto;
+	width: 350px;
+	text-align:center;
+	height: 350px;
+	/*border: 1px solid rgba(0,0,0,0.1);*/
+	border-radius: 50%;
+	transform: rotate(0deg);
+	transition: transform 0.7s linear;
+}
+.circleLab {
+	position: absolute;
+	/*width: 80px;
+	height: 80px;*/
+	transform: rotate(0deg);
+	transition: transform 0.7s linear;
+	/*top: -40px;    -child size/2 */
+	/*left: 110px;    parent size/2 - child size/2 */
+}
+
+.circleLab img {
+	max-width: 100%;
+	border-radius: 50%;
+	/*background-color: darkseagreen;*/
+    padding: 10px 20px;
+	height:100px;
+}
+
+#centerBlock{
+		-webkit-animation: rotation 60s infinite linear;
+}
+#circleLab1 img,#circleLab2 img,#circleLab3 img,#circleLab4 img,#circleLab5 img,#circleLab6 img,#circleLab7 img{
+		-webkit-animation: rotationc 60s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+		0% {
+				-webkit-transform: rotate(0deg);
+		}
+		12% {
+				-webkit-transform: rotate(0deg);
+		}
+		15% {
+				-webkit-transform: rotate(55deg);
+		}
+		27% {
+				-webkit-transform: rotate(55deg);
+		}
+		30% {
+				-webkit-transform: rotate(110deg);
+		}
+		42% {
+				-webkit-transform: rotate(110deg);
+		}
+		45% {
+				-webkit-transform: rotate(165deg);
+		}
+		57% {
+				-webkit-transform: rotate(165deg);
+		}
+		60% {
+				-webkit-transform: rotate(220deg);
+		}
+		72% {
+				-webkit-transform: rotate(220deg);
+		}
+		75% {
+				-webkit-transform: rotate(275deg);
+		}
+		87% {
+				-webkit-transform: rotate(275deg);
+		}
+		89% {
+				-webkit-transform: rotate(330deg);
+		}
+		98% {
+				-webkit-transform: rotate(330deg);
+		}
+		100% {
+				-webkit-transform: rotate(360deg);
+		}
+}
+@-webkit-keyframes rotationc {
+		0% {
+				-webkit-transform: rotate(-0deg);
+		}
+		12% {
+				-webkit-transform: rotate(-0deg);
+		}
+		15% {
+				-webkit-transform: rotate(-55deg);
+		}
+		27% {
+				-webkit-transform: rotate(-55deg);
+		}
+		30% {
+				-webkit-transform: rotate(-110deg);
+		}
+		42% {
+				-webkit-transform: rotate(-110deg);
+		}
+		45% {
+				-webkit-transform: rotate(-165deg);
+		}
+		57% {
+				-webkit-transform: rotate(-165deg);
+		}
+		60% {
+				-webkit-transform: rotate(-220deg);
+		}
+		72% {
+				-webkit-transform: rotate(-220deg);
+		}
+		75% {
+				-webkit-transform: rotate(-275deg);
+		}
+		87% {
+				-webkit-transform: rotate(-275deg);
+		}
+		89% {
+				-webkit-transform: rotate(-330deg);
+		}
+		98% {
+				-webkit-transform: rotate(-330deg);
+		}
+		100% {
+				-webkit-transform: rotate(-360deg);
+		}
+}
+</style>
+
+<!--style block-->
+<!--main container block-->
+<div id="mainBlockContainer">
+	<div id="menuBar">
+		<div>
+			<img src="https://iiitd.ac.in/gallery/assets/img/iiitd4.png"/>
+			<nav class="navigation">
+			  <ul class="mainmenu">
+				<li id="menulink1" class="selected"><a href="testiiitd.html?contentBlock1">Home</a></li>
+				<li id="menulink2"><a href="testiiitd.html?contentBlock2">About</a>
+					<!--<ul class="submenu">
+						<li><a href="">Tops</a></li>
+						<li><a href="">Bottoms</a></li>
+						<li><a href="">Footwear</a></li>
+					  </ul>-->
+				</li>
+				<li id="menulink3"><a href="testiiitd.html?contentBlock3">Labs</a></li>
+				<li id="menulink4"><a href="testiiitd.html?contentBlock4">Facilities</a>
+				 <!-- <ul class="submenu">
+					<li><a href="">Tops</a></li>
+					<li><a href="">Bottoms</a></li>
+					<li><a href="">Footwear</a></li>
+				  </ul>-->
+				</li>
+				<li id="menulink5"><a href="testiiitd.html?contentBlock5">Policies & Guidelines</a></li>
+				<li><a href="">Links</a></li>
+				<li id="menulink6"><a href="testiiitd.html?contentBlock6">Gallery</a></li>
+				<li><a href="">Projects</a></li>
+				<li><a href="">FAQs</a></li>
+				<li id="menulink7"><a href="testiiitd.html?contentBlock7">Feedback</a></li>
+				<li id="menulink8"><a href="testiiitd.html?contentBlock8">Team</a></li>
+				<li id="menulink9"><a href="testiiitd.html?contentBlock9">Contact</a></li>
+			  </ul>
+			</nav>
+		</div>
+
+	</div>
+	<div id="descriptionBar">
+	<div>
+		<div id="contentBlock1" class="contentBlock" style="position:absolute;z-index:10;">
+			<div id="descCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+				  <li data-target="#descCarousel" data-slide-to="0" class="active"></li>
+				  <li data-target="#descCarousel" data-slide-to="1"></li>
+				<!--  <li data-target="#descCarousel" data-slide-to="2"></li>-->
+				</ol>
+				<div style="clear:both;"></div>
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+				  <div class="item cimage1 active">
+				<!--	  <img src="http://themetrading.com/html/runaway/template/regular/images/slider/01.jpg"/>-->
+					  <div class="caption animated animatedFadeInUp fadeInUp">
+						<h1 class="">Vehicular Communication for Enhanced Road Safety </h1>
+						<p class="carDesc">The aim of this workshop is to bring together Indian and international experts in vehicular communication and allied areas to deliberate, explore and present technical talks on the state-of-the-art  development of inter-vehicular (V2V) and vehicular to infrastructure (V2I) communication systems for different areas of applications such as road safety, autonomous vehicles deployment, electrical and hybrid vehicles etc.</p>
+						<a class="btn btn-default" href="#contentBlock3">Visit Page</a>
+					  </div>
+				  </div>
+				  <div class="item cimage2">
+				<!--	  <img src="http://themetrading.com/html/runaway/template/regular/images/slider/01.jpg"/>-->
+					<!--  <div class="caption animated animatedFadeInUp fadeInUp">
+				<h1 class="">Awesome solution<br> for you Business</h1>
+				<p class="carDesc">Risus faucibus mollis velit sollicitudin consequat inceptos dictum. Cras quis amet dui inceptos varius, faucibus bibendum fringilla sodales mauris tortor lacus vitae sagittis consequat dapibus consequat justo nostra.</p>
+				<a class="btn btn-default" href="#">Start a Project</a>
+			  </div>-->
+			  
+			  <div id="labInfoBlock"  class="caption animated animatedFadeInUp fadeInUp">
+				<div id="lab1" class="">
+				<h1 class="">TESLA LAB</h1>
+				<p class="carDesc">IIITD, an institute leading in education and research relevant to the current technologies and needs of industry, is running several labs to support its teaching and research work being carried out by its faculty members, research scholars and students, in both CSE and ECE streams. All research labs are located in Faculty and Research block while all teaching labs are housed in the Lecture Hall Complex on the campus.</p>
+				<a class="btn btn-default" href="#">Explore More</a>
+				</div>
+				<div id="lab2" class=""><h1 class="">Circuits & Networks Lab</h1>
+				<p class="carDesc">Circuits and Networks Lab (302) at IIIT Delhi, which is dedicated to circuits designing, is intended to serve its facilities as one of the teaching labs and also to facilitate teaching projects and research projects. These projects and teaching work include the experimental and innovative study in the field of analog and digital circuits, microcontrollers and its applications. The aim of the lab, which is under the Electronics and Communication Engineering Department, is to produce trained professionals for the industry and to achieve excellence in research using latest technology and innovative ideas for research as well. The lab caters to the requirement of all the students.</p>
+				<a class="btn btn-default" target="_blank" href="https://iiitd.ac.in/facilities/tlabs/cvl_lab">Explore More</a></div>
+				<div id="lab3" class=""><h1 class="">BASIC ELECTRONICS LAB</h1>
+				<p class="carDesc">Basic Electronics Lab (303) at IIIT Delhi, which is dedicated to circuits designing, is intended to serve its facilities as one of the teaching labs and also to facilitate teaching projects and research projects. These projects and teaching work include the experimental and innovative study in the field of analog and digital circuits, microcontrollers and its applications. The aim of the lab, which is under the Electronics and Communication Engineering Department, is to produce trained professionals for the industry and to achieve excellence in research using latest technology and innovative ideas for research as well. The lab caters to the requirement of all the students.</p>
+				<a class="btn btn-default" href="#">Explore More</a></div>
+				<div id="lab4" class=""><h1 class="">RF & APPLIED ELECTROMAGNETIC LAB</h1>
+				<p class="carDesc">The RF and Applied Electromagnetic Lab (304) is equipped with high frequency instruments and tools to explore the RF and applied electromagnetic field. Some licensed softwares are also available to design the high frequency antennas and fabricate as well using PCB fabrication machine. This lab acts as a research lab to research scholars, research associates and interns, and also as a course lab for thesis and course projects. Main Research areas of the lab include understanding of high frequency devices, Antenna theory concepts and design fields. Its goal is to become a leading research and development group in the RF and Applied Electromagnetic Engineering.</p>
+				<a class="btn btn-default" target="_blank" href="https://iiitd.ac.in/facilities/tlabs/rfael_lab">Explore More</a></div>
+				<div id="lab5" class=""><h1 class="">SHANNON LAB</h1>
+				<p class="carDesc">The objective of Shannon Lab (305) is to manage teaching programs and research facilities involving all aspects of wireless communication and signal processing. Teaching programs include experiments and project assignments related to course work of students whereas the research work involves research scholars, interns and students working in the areas related to robotics and automation, signal processing and wireless communication and networking.</p>
+				<a class="btn btn-default" target="_blank" href="https://iiitd.ac.in/facilities/tlabs/shannon_lab">Explore More</a></div>
+				<div id="lab6" class=""><h1 class="">Advanced ECE Lab</h1>
+				<p class="carDesc">The objective of Advanced ECE Lab (A-616) is to develop testbeds  to facilitate the teaching and research in the institute.</p>
+				<a class="btn btn-default" href="#">Explore More</a></div>
+				<div id="lab7" class=""><h1 class="">M.TECH LABS</h1>
+				<p class="carDesc">These labs (A-617, B-617) provide several course and research related softwares and hardwares, which can be utilized by M.Tech students.</p>
+				<a class="btn btn-default" href="#">Explore More</a></div>
+			  </div>
+			  <div id="labDiagram">
+			  <div>
+			  <div style="position:absolute;z-index:100;color:black;font-weight:bold;font-size:24px;top:42%;right:20%;">ECE LABS</div>
+			  <div id="centerBlock" style="">
+				<div id="circleLab1" class="circleLab" style="left:-75px;top:100px;">
+					<img src="images/teslalab.png"/>
+				</div>
+				<div id="circleLab2" class="circleLab" style="left:-40px;top:240px;">
+					<img src="images/circuitslab.png"/>
+				</div>
+				<div id="circleLab3" class="circleLab" style="right:75px;top:300px;">
+					<img src="images/basic.png"/>
+				</div>
+				<div id="circleLab4" class="circleLab" style="right:-50px;top:220px;">
+					<img src="images/rflab.png"/>
+				</div>
+				<div id="circleLab5" class="circleLab" style="right:-75px;top:100px;">
+					<img src="images/shannonlab.png"/>
+				</div>
+				<div id="circleLab6" class="circleLab" style="right:30px;top:-20px;">
+					<img src="images/advancedlab.png"/>
+				</div>
+				<div id="circleLab7" class="circleLab" style="">
+					<img src="images/mtechlabs.png"/>
+				</div>
+			  </div>
+			  </div>
+			  <img style="display:none;" src="images/starO.png"/>			  
+			  </div>
+			  <div style="clear:both;"></div>
+			  <!--<div id="labInfoBlock">
+				<div id="lab1" class="labinfo animated animatedFadeInUp fadeInUp">
+				<h2>ECE Labs</h2>
+				<p>lab data 1 to be entered here</p>
+				</div>
+				<div id="lab2" class="labinfo">lab data 2 to be entered here</div>
+				<div id="lab3" class="labinfo">lab data 3 to be entered here</div>
+				<div id="lab4" class="labinfo">lab data 4 to be entered here</div>
+				<div id="lab5" class="labinfo">lab data 5 to be entered here</div>
+				<div id="lab6" class="labinfo">lab data 6 to be entered here</div>
+			  </div>-->
+				  </div>
+
+				<!--  <div class="item cimage2">-->
+				<!--	<img src="http://themetrading.com/html/runaway/template/regular/images/slider/02.jpg"/>-->
+				<!--	  <div class="caption animated animatedFadeInUp fadeInUp">
+						<h1 class="">Shannon Lab</h1>
+						<!--<h1 class="fDark">Awesome solution<br> for you Business</h1>-->
+				<!--		<p class="carDesc ">The objective of Shannon Lab (L32) is to manage teaching programs and research facilities involving all aspects of wireless communication and signal processing. Teaching programs include experiments and project assignments related to course work.</p>
+						<a class="btn btn-default" href="#">Visit Page</a>
+					  </div>
+				  </div>-->
+				
+				<!--  <div class="item cimage3">-->
+				<!--	<img src="http://themetrading.com/html/runaway/template/regular/images/slider/03.jpg"/>-->
+				<!--	  <div class="caption animated animatedFadeInUp fadeInUp">
+						<h1 class="fDark">RF and Applied<br> Electromagnetics Lab</h1>
+						<p class="carDesc fDark">The RF and Applied Electromagnetics Lab (L31) is equipped with high frequency instruments and tools to explore the RF and applied electromagnetics field. Some licensed software are also available to design the high frequency antennas and fabricate as well using PCB fabrication machine.</p>
+						<a class="btn btn-default" href="#">Visit Page</a>
+					  </div>
+				  </div>-->
+				</div>
+			</div>
+		</div>
+	<!--	<div id="contentBlock2" class="contentBlock" style="display:none;position:absolute;z-index:10;">						
+		  <div class="blockimage1">
+			  <div class="caption animated animatedFadeInUp fadeInUp">
+				<h1 class="">Awesome solution<br> for you Business</h1>
+				<p class="carDesc">Risus faucibus mollis velit sollicitudin consequat inceptos dictum. Cras quis amet dui inceptos varius, faucibus bibendum fringilla sodales mauris tortor lacus vitae sagittis consequat dapibus consequat justo nostra.</p>
+				<a class="btn btn-default" href="#">Start a Project</a>
+			  </div>
+			  <div id="labDiagram">
+			  <img src="https://s3-ap-southeast-1.amazonaws.com/awsing-inteadi-stg-repository01/static/header/star.png"/>
+			  </div>
+			  <div style="clear:both;"></div>
+			  <div id="labInfoBlock">
+				<div id="lab1" class="labinfo animated animatedFadeInUp fadeInUp">lab data 1 to be entered here</div>
+				<div id="lab2" class="labinfo">lab data 2 to be entered here</div>
+				<div id="lab3" class="labinfo">lab data 3 to be entered here</div>
+				<div id="lab4" class="labinfo">lab data 4 to be entered here</div>
+				<div id="lab5" class="labinfo">lab data 5 to be entered here</div>
+				<div id="lab6" class="labinfo">lab data 6 to be entered here</div>
+			  </div>
+		   </div>
+		</div>-->
+		<div id="contentBlock2" class="contentBlock tableView" style="display:none;position:absolute;z-index:10;">						
+			<div class="tabular-3">
+				<img src="http://themetrading.com/html/runaway/template/regular/images/slider/01.jpg" style="width:100%;height: 100vh !important;max-width: 100% !important;background-repeat: round;"/>
+			</div>
+			<div class="tabular-3 textCol">
+				<h2>About ECE Labs</h2>
+				<p>IIITD, an institute leading in education and research relevant to the current technologies and needs of industry, is running several labs to support its teaching and research work being carried out by its faculty members, research scholars and students, in both CSE and ECE streams.</p>
+				<div>All research labs are located in Faculty and Research block while all teaching labs are housed in the Lecture Hall Complex on the campus. Research labs, associated with focused research groups, are working in areas of IT and Electronics, details about which are given here. Teaching labs help students understand theoretical concepts taught in the course of their study.</div>
+			</div>
+			<div class="tabular-3 textCol">
+				<div class="formData" style="border-bottom:1px solid #fff;">Email Id : <span>faculty@iiitd.com</span></div>
+				<div class="formData" style="border-bottom:1px solid #fff;">Location : <span>Okhla, New Delhi</span></div>
+				<div class="formData" style="border-bottom:1px solid #fff;">Being in operaton since :<span> 2008</span></div>
+			</div>  
+		</div>
+		<div id="contentBlock3" class="contentBlock tableView" style="display:none;position:absolute;z-index:10;">
+		<div class="tabular-3 textCol alignTop">
+				<h2>Circuits and VLSI Lab</h2>
+				<img src="https://www.iiitd.ac.in/sites/default/files/images/labs/cvl_lab04.jpg" style="width:100%;max-width: 100% !important;"/>
+				<div>Circuits and VLSI Lab (L33) at IIIT Delhi, which is dedicated to circuits and VLSI designing, is intended to serve its facilities as one of the teaching labs and also to facilitate teaching projects and research projects. These projects and teaching work include the experimental and innovative study in the field of analog and digital circuits, VLSI designing, microcontrollers and its applications. The aim of the lab, which is under the Electronics and Communication Engineering Department, is to produce trained professionals for the industry and to achieve excellence in research using latest technology and innovative ideas for research as well. The lab caters to the requirement of 280 BTech students (32 each per session).</div>
+			</div>
+			<div class="tabular-3 textCol alignTop">				
+				<h2>Facilities</h2>
+				<div><ul>
+				<li>Microcontroller Boards</li>
+				<li>FPGA Boards</li>
+				<li>DC Trainer Kits</li>
+				<li>Sensors and Actuators</li>
+				<li>Digital Storage</li>
+				<li>Oscilloscope Arbitrary Function Generator</li>	
+				<li>Power Supply</li>
+				<li>ESD Safe Soldering Stations</li>
+				<li>Tiva-C Launchpad with Boosterpacks</li>
+				<li>Xilinx ISE Design Suite</li>
+				<li>MATLAB</li>				
+				</ul></div>		
+				<img src="https://www.iiitd.ac.in/sites/default/files/images/labs/vlsilab1.jpg" style="width:100%;max-width: 100% !important;"/>
+			</div>
+			<div class="tabular-3 textCol alignTop">
+			<img src="https://www.iiitd.ac.in/sites/default/files/images/labs/vlsilab2.jpg" style="width:100%;max-width: 100% !important;"/>
+				<h2>Important Links</h2>
+				<li>Lab Inventory:<a>Consumables / Non-consumables</a></li>
+				<li><a>Issue form</a></li>
+				<li><a>Issue/Return Entries</a></li>
+				<li><a>Feedback Form</a></li>
+			</div>
+		</div>
+		<div id="contentBlock4" class="contentBlock factcontainer textCol" style="display:none;position:absolute;z-index:10; background-color:#2e2e2e;width:100%;">
+		<h2>Facilities</h2>
+		<p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written</p>
+		<div class="carousel slide" id="facilitiesCarousel">
+		  <div class="carousel-inner" style="display:table">
+			<div class="item active">
+			  <div class="col-md-4"><a href="#"><div class="tileCard">
+			  <div style="padding-top: 40px;"><i class='fa fa-graduation-cap iconSymbol'></i></div>
+			  <h2>Hardware Facilities</h2>
+			  <p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written </p>
+			  </div></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-4"><a href="#"><div class="tileCard">
+			   <div style="padding-top: 40px;"><i class='fa fa-graduation-cap iconSymbol'></i></div>
+			  <h2>Software Facilities</h2>
+			  <p>Sample text written Sample text written</p>
+			  </div></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-4"><a href="#"><div class="tileCard">
+			   <div style="padding-top: 40px;"><i class='fa fa-graduation-cap iconSymbol'></i></div>
+			  <h2>Issue/Return Facility</h2>
+			  <p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written</p>
+			  </div></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-4"><a href="#"><div class="tileCard">
+			   <div style="padding-top: 40px;"><i class='fa fa-graduation-cap iconSymbol'></i></div>
+			  <h2>Cabinet Facility</h2>
+			  <p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written</p>
+			  </div></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-4"><a href="#"><div class="tileCard">
+			   <div style="padding-top: 40px;"><i class='fa fa-graduation-cap iconSymbol'></i></div>
+			  <h2>Lab Access Facility</h2>
+			  <p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written</p>
+			  </div></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-4"><a href="#"><div class="tileCard">
+			   <div style="padding-top: 40px;"><i class='fa fa-graduation-cap iconSymbol'></i></div>
+			  <h2>Lab Manuals/Handouts</h2>
+			  <p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written</p>
+			  </div></a></div>
+			</div>
+		  </div>
+		  <a id="leftClickControl" class="left carousel-control" href="#facilitiesCarousel" data-slide="prev"><i class="fa fa-angle-left iconSymbol arrow" aria-hidden="true"></i></a>
+		  <a id="rightClickControl" class="right carousel-control" href="#facilitiesCarousel" data-slide="next"><i class="fa fa-angle-right iconSymbol arrow" aria-hidden="true"></i></a>
+		</div>
+		<div style="text-align: center;">
+			<i id="leftClick" class="fa fa-angle-left iconSymbol arrow" aria-hidden="true"></i>
+			<i id="rightClick"class="fa fa-angle-right iconSymbol arrow" aria-hidden="true"></i>
+		</div>
+		</div>
+		<div id="contentBlock5" class="contentBlock policiescontainer textCol" style="display:none;position:absolute;z-index:10; background-color:#2e2e2e;width:100%;">
+		<p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written</p>
+		<div class="carousel slide" id="policiesCarousel">
+		  <div class="carousel-inner" style="display:table">
+			<div class="item active">
+			  <div class="col-md-4"><div class="tileCard">
+			  <h2>Policies & Guidelines</h2>
+			  <h1>Issue/Return Policy </h1>
+			  <div class="pformData">Sample text written Sample</div>
+			  <div class="pformData">Sample written Sample</div>
+			  <div class="pformData">Sample text Sample</div>
+			  <div class="pformData">Sample text written Sample</div>
+			  <div class="pformData">Sample text Sample</div>
+			  <div class="dwnload">
+			  <a class="btn btn-default" href="#">Download</a>
+			  </div>
+			  </div></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-4"><div class="tileCard">
+			  <h2>Policies & Guidelines</h2>
+			  <h1>Locker Policy</h1>
+			  <div class="pformData">Sample text written Sample</div>
+			  <div class="pformData">Sample written Sample</div>
+			  <div class="pformData">Sample text Sample</div>
+			  
+			  <div class="dwnload">
+			  <a class="btn btn-default" href="#">Download</a>
+			  </div>
+			  </div></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-4"><div class="tileCard">
+			  <h2>Policies & Guidelines</h2>
+			  <h1>Lab Safety & Security Guidelines</h1>
+			  <div class="pformData">Sample text written Sample</div>
+			  <div class="pformData">Sample written Sample</div>
+			  <div class="pformData">Sample text Sample</div>
+			  <div class="pformData">Sample text written Sample</div>
+			  <div class="pformData">Sample text Sample</div>
+			  <div class="dwnload">
+			  <a class="btn btn-default" href="#">Download</a>
+			  </div>
+			  </div></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-4"><div class="tileCard">
+			  <h2>Policies & Guidelines</h2>
+			  <h1>Lab Guidelines</h1>
+			  <div class="pformData">Sample text written Sample</div>
+			  <div class="pformData">Sample written Sample</div>			  
+			  <div class="pformData">Sample text written Sample</div>
+			  <div class="pformData">Sample text Sample</div>
+			  <div class="dwnload">
+			  <a class="btn btn-default" href="#">Download</a>
+			  </div>
+			  </div></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-4"><div class="tileCard">
+			  <h2>Policies & Guidelines</h2>
+			  <h1>Student Guidelines</h1>
+			  <div class="pformData">Sample text written Sample</div>
+			  <div class="pformData">Sample written Sample</div>			  
+			  <div class="pformData">Sample text written Sample</div>
+			  <div class="pformData">Sample text Sample</div>
+			  <div class="dwnload">
+			  <a class="btn btn-default" href="#">Download</a>
+			  </div>
+			  </div></div>
+			</div>
+		  </div>
+		  <a id="pleftClickControl" class="left carousel-control" href="#policiesCarousel" data-slide="prev"><i class="fa fa-angle-left iconSymbol arrow" aria-hidden="true"></i></a>
+		  <a id="prightClickControl" class="right carousel-control" href="#policiesCarousel" data-slide="next"><i class="fa fa-angle-right iconSymbol arrow" aria-hidden="true"></i></a>
+		</div>
+		<div style="text-align: center;">
+			<i id="pleftClick" class="fa fa-angle-left iconSymbol arrow" aria-hidden="true"></i>
+			<i id="prightClick"class="fa fa-angle-right iconSymbol arrow" aria-hidden="true"></i>
+		</div>
+		</div>
+		<div id="contentBlock6" class="contentBlock gallerycontainer textCol" style="display:none;position:absolute;z-index:10; background-color:#2e2e2e;width:100%;">
+		<div>
+			<h2>Gallery</h2>
+			<p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written</p>
+		</div>
+		<div id="gallerycontrol">
+			<div id="f_All" class="gallerynav selected">All</div>
+			<div id="f_Technical" class="gallerynav">Technical Events</div>
+			<div id="f_Workshops" class="gallerynav">Workshops</div>
+			<div id="f_Talks" class="gallerynav">Talks</div>
+			<div id="f_Videos" class="gallerynav">Videos</div>
+		</div>
+		<div id="gallerysite">
+			<div class="col-md-4" id="gall1" data-filter="Technical Events, Workshops">
+				<img src="http://themetrading.com/html/runaway/template/regular/images/portfolio/01.jpg" style="width:100%;"/>
+				<div class="overlay">
+					<div class="eye"><i class="fa fa-eye" aria-hidden="true"></i></div>
+					<div class="filterval">Technical Events, Workshops</div>
+				</div>
+			</div>
+			<div class="col-md-4" id="gall2" data-filter="Talks, Videos">
+				<img src="http://themetrading.com/html/runaway/template/regular/images/portfolio/02.jpg" style="width:100%;"/>
+				<div class="overlay">
+					<div class="eye"><i class="fa fa-eye" aria-hidden="true"></i></div>
+					<div class="filterval">Talks, Videos</div>
+				</div>
+			</div>
+			<div class="col-md-4" id="gall3" data-filter="Technical Events, Talks">
+				<img src="http://themetrading.com/html/runaway/template/regular/images/portfolio/03.jpg" style="width:100%;"/>
+				<div class="overlay">
+					<div class="eye"><i class="fa fa-eye" aria-hidden="true"></i></div>
+					<div class="filterval">Technical Events, Talks</div>
+				</div>
+			</div>
+			<div class="col-md-4" id="gall4" data-filter="Talks, Workshops">
+				<img src="http://themetrading.com/html/runaway/template/regular/images/portfolio/04.jpg" style="width:100%;"/>
+				<div class="overlay">
+					<div class="eye"><i class="fa fa-eye" aria-hidden="true"></i></div>
+					<div class="filterval">Talks, Workshops</div>
+				</div>
+			</div>
+			<div class="col-md-4" id="gall5" data-filter="Technical Events, Videos">
+				<img src="http://themetrading.com/html/runaway/template/regular/images/portfolio/05.jpg" style="width:100%;"/>
+				<div class="overlay">
+					<div class="eye"><i class="fa fa-eye" aria-hidden="true"></i></div>
+					<div class="filterval">Technical Events, Videos</div>
+				</div>
+			</div>
+			<div class="col-md-4" id="gall6" data-filter="Videos, Workshops">
+				<img src="http://themetrading.com/html/runaway/template/regular/images/portfolio/06.jpg" style="width:100%;"/>
+				<div class="overlay">
+					<div class="eye"><i class="fa fa-eye" aria-hidden="true"></i></div>
+					<div class="filterval">Videos, Workshops</div>
+				</div>
+			</div>
+		</div>
+		<div id="videoblock">
+			<div class="col-lg-6 col-md-6 col-sm-6 sol-xs-6">
+				<div class="vhead">Video Topic</div>
+				<p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written</p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 sol-xs-6">
+				<div id="videobox">
+					<!--<iframe width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"></iframe>-->
+					<image src="http://themetrading.com/html/runaway/template/regular/images/video.jpg"/>
+					<a id="videopopup" class="popupplay" href="#contentBlock7">
+						<i class="fa fa-play" aria-hidden="true"></i>
+					</a>
+					<div class="panime">
+						<div class="multidiv">
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div id="contentBlock7" class="contentBlock feedbackcontainer textCol" style="display:none;position:absolute;z-index:10; background-color:#2e2e2e;width:100%;">
+		<h2>Feedback</h2>
+		<p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written</p>
+		<div class="carousel slide" id="feedbackCarousel">
+		  <div class="carousel-inner" style="display:table">
+			<div class="item active">
+			  <div class="col-md-6"><div class="tileCard">
+			  <div style="position:relative;height:100%;">
+			  <div style="position:absolute;bottom:0;">
+			  <div class="feedbackimage">
+				<img src="http://themetrading.com/html/runaway/template/regular/images/testimonial/03.jpg"/>
+			  </div>
+			  <div class="star">
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  </div>
+			  <h2>Heading1</h2>
+			  <p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written </p>
+				</div>
+				</div>
+			  </div></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-6"><div class="tileCard">
+			  <div style="position:relative;height:100%;">
+			  <div style="position:absolute;bottom:0;">
+			  <div class="feedbackimage">
+				<img src="http://themetrading.com/html/runaway/template/regular/images/testimonial/01.jpg"/>
+			  </div>
+			  <div class="star">
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  </div>
+			  <h2>Heading2</h2>
+			  <p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written </p>
+				</div>
+				</div>
+			  </div></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-6"><div class="tileCard">
+			  <div style="position:relative;height:100%;">
+			  <div style="position:absolute;bottom:0;">
+			  <div class="feedbackimage">
+				<img src="http://themetrading.com/html/runaway/template/regular/images/testimonial/02.jpg"/>
+			  </div>
+			  <div class="star">
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  </div>
+			  <h2>Heading3</h2>
+			  <p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written </p>
+				</div>
+				</div>
+			  </div></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-6"><div class="tileCard">
+			  <div style="position:relative;height:100%;">
+			  <div style="position:absolute;bottom:0;">
+			  <div class="feedbackimage">
+				<img src="http://themetrading.com/html/runaway/template/regular/images/testimonial/04.jpg"/>
+			  </div>
+			  <div class="star">
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  <i class="fa fa-star" style="font-size:24px"></i>
+			  </div>
+			  <h2>Heading4</h2>
+			  <p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written </p>
+				</div>
+				</div>
+			  </div></div>
+			</div>
+		  </div>
+		  <a id="fleftClickControl" class="left carousel-control" href="#feedbackCarousel" data-slide="prev"><i class="fa fa-angle-left iconSymbol arrow" aria-hidden="true"></i></a>
+		  <a id="frightClickControl" class="right carousel-control" href="#feedbackCarousel" data-slide="next"><i class="fa fa-angle-right iconSymbol arrow" aria-hidden="true"></i></a>
+		</div>
+		<div style="text-align: center;">
+			<i id="fleftClick" class="fa fa-angle-left iconSymbol arrow" aria-hidden="true"></i>
+			<i id="frightClick"class="fa fa-angle-right iconSymbol arrow" aria-hidden="true"></i>
+		</div>
+		</div>
+		<div id="contentBlock8" class="contentBlock teamcontainer textCol" style="display:none;position:absolute;z-index:10; background-color:#2e2e2e;width:100%;">
+		<h2>Team</h2>
+		<p>Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written</p>
+		<div class="carousel slide" id="teamCarousel">
+		  <div class="carousel-inner" style="display:table">
+			<div class="item active">
+			  <div class="col-md-4"><div class="tileCard">
+			  <img src="https://www.iiitd.ac.in/sites/default/files/images/labs/DSC_0380.JPG" style="width:100%;"/>
+			  <div class="teamname">Er. Rahul Gupta</div>
+			  <div class="tdesi">Research Engineer</div>
+			  <div class="overlay">
+				</div>
+				<div class="overlaymask">
+				<div class="teamolay">
+						<div class="maskname">Er. Rahul Gupta</div>
+						<div class="maskdesi">Research Engineer</div>
+						<div class="maskdesc">rahul@iiitd.ac.in</div>
+						<div>
+						<i class="fa fa-facebook iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-twitter iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-google-plus iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-linkedin iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-instagram iconSymbol arrow" aria-hidden="true"></i>
+						</div>
+					</div></div>
+			  </div></div>
+			</div>
+			<div class="item">
+<div class="col-md-4"><div class="tileCard">
+			  <img src="https://www.iiitd.ac.in/sites/default/files/images/admin/staff/sana.jpg" style="width:100%;"/>
+			  <div class="teamname">Er. Sana Ali Naqvi</div>
+			  <div class="tdesi">Jr. Research Engineer</div>
+			  <div class="overlay">
+				</div>
+				<div class="overlaymask">
+				<div class="teamolay">
+						<div class="maskname">Er. Sana Ali Naqvi</div>
+						<div class="maskdesi">Jr. Research Engineer</div>
+						<div class="maskdesc">sana@iiitd.ac.in</div>
+						<div>
+						<i class="fa fa-facebook iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-twitter iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-google-plus iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-linkedin iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-instagram iconSymbol arrow" aria-hidden="true"></i>
+						</div>
+					</div></div>
+			  </div></div>
+			</div>
+			<div class="item">
+<div class="col-md-4"><div class="tileCard">
+			  <img src="https://www.iiitd.ac.in/sites/default/files/images/admin/staff/abhishek.jpg" style="width:100%;"/>
+			  <div class="teamname">Er. Abhishek Kumar</div>
+			  <div class="tdesi">Jr. Research Engineer</div>
+			  <div class="overlay">
+				</div>
+				<div class="overlaymask">
+				<div class="teamolay">
+						<div class="maskname">Er. Abhishek Kumar</div>
+						<div class="maskdesi">Jr. Research Engineer</div>
+						<div class="maskdesc">abhishek@iiitd.ac.in</div>
+						<div>
+						<i class="fa fa-facebook iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-twitter iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-google-plus iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-linkedin iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-instagram iconSymbol arrow" aria-hidden="true"></i>
+						</div>
+					</div></div>
+			  </div></div>
+			</div>
+			<div class="item">
+<div class="col-md-4"><div class="tileCard">
+			  <img src="https://www.iiitd.ac.in/sites/default/files/images/admin/staff/sana.jpg" style="width:100%;"/>
+			  <div class="teamname">SAMPLE NAME 4</div>
+			  <div class="tdesi">DESIGNATION 4</div>
+			  <div class="overlay">
+				</div>
+				<div class="overlaymask">
+				<div class="teamolay">
+						<div class="maskname">SAMPLE NAME 4</div>
+						<div class="maskdesi">DESIGNATION 4</div>
+						<div class="maskdesc">Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written Sample text written</div>
+						<div>
+						<i class="fa fa-facebook iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-twitter iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-google-plus iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-linkedin iconSymbol arrow" aria-hidden="true"></i>
+						<i class="fa fa-instagram iconSymbol arrow" aria-hidden="true"></i>
+						</div>
+					</div></div>
+			  </div></div>
+			</div>
+		  </div>
+		  <a id="tleftClickControl" class="left carousel-control" href="#teamCarousel" data-slide="prev"><i class="fa fa-angle-left iconSymbol arrow" aria-hidden="true"></i></a>
+		  <a id="trightClickControl" class="right carousel-control" href="#teamCarousel" data-slide="next"><i class="fa fa-angle-right iconSymbol arrow" aria-hidden="true"></i></a>
+		</div>
+		<div style="text-align: center;">
+			<i id="tleftClick" class="fa fa-angle-left iconSymbol arrow" aria-hidden="true"></i>
+			<i id="trightClick"class="fa fa-angle-right iconSymbol arrow" aria-hidden="true"></i>
+		</div>
+		</div>
+		<div id="contentBlock9" class="contentBlock" style="display:none;position:absolute;z-index:10;">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 textCol">
+				<h2>Contact</h2>
+				<p>IIIT-Delhi campus is located in Okhla, near Nehru Place, New Delhi.</p>
+				<div>
+					<div class="contact">
+						<div class="inblock">
+							<i class="fa fa-envelope iconSymbol arrow" style="font-size:24px"></i>
+						</div>
+						<div class="inblock">
+							<div class="heading">CALL</div>
+							<div class="data">91-11-26907400-7404</div>
+						</div>
+					</div>
+					<div class="contact">
+						<div class="inblock">
+							<i class="fa fa-envelope iconSymbol arrow" style="font-size:24px"></i>
+						</div>
+						<div class="inblock">
+							<div class="heading">EMAIL</div>
+							<div class="data">	info@iiitd.ac.in</div>
+						</div>
+					</div>
+					<div class="contact">
+						<div class="inblock">
+							<i class="fa fa-envelope iconSymbol arrow" style="font-size:24px"></i>
+						</div>
+						<div class="inblock">
+							<div class="heading">ADDRESS</div>
+							<div class="data">Indraprastha Institute of Information Technology, Delhi Okhla Industrial Estate,Phase III (Near Govind Puri Metro Station) New Delhi, India - 110020</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 textCol">
+				<div class="formbox">
+					<div class="firstline">
+						<input placeholder="Your Name"/>
+						<input placeholder="Email Address"/>
+						<input placeholder="Roll Number"/>
+					</div>
+					<div class="secondline">
+						<input placeholder="Subject"/>
+					</div>
+					<div class="thirdline">
+						<textarea rows="3" placeholder="Message"></textarea>
+					</div>
+					<a  id="submitform" class="btn btn-default" href="#contentBlock10">Send Message</a>
+				</div>
+			</div>  
+		</div>
+	<div  id="contactControl">
+		<a href="https://docs.google.com/a/iiitd.ac.in/forms/d/e/1FAIpQLSfQcSsewEy0mJJJ6lGRp93KaYUmXIN3G983I_F2m6QJOSyeaQ/viewform" style="float: right;color: #ffb32f;"><i class="fa fa-envelope" style="font-size:24px"></i></a>
+	</div>
+	<div id="sectionControl">		
+		<div style="clear:both;"></div>
+		<ul style="list-style-type: none;display:none;">
+			<li><div id="btn1" class="sectionPointer selectionPointer"><span class="dot"></span></div></li>
+			<li><div id="btn2" class="sectionPointer"><span class="dot"></span></div></li>
+			<li><div id="btn3" class="sectionPointer"><span class="dot"></span></div></li>
+			<li><div id="btn4" class="sectionPointer"><span class="dot"></span></div></li>
+			<li><div id="btn5" class="sectionPointer"><span class="dot"></span></div></li>
+			<li><div id="btn6" class="sectionPointer"><span class="dot"></span></div></li>
+			<li><div id="btn7" class="sectionPointer"><span class="dot"></span></div></li>
+			<li><div id="btn8" class="sectionPointer"><span class="dot"></span></div></li>
+			<li><div id="btn9" class="sectionPointer"><span class="dot"></span></div></li>
+			<!--<li><div id="btn10" class="sectionPointer"><span class="dot"></span></div></li>-->
+		</ul>
+	</div>
+	<div id="successmsg" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
+<p>Message sent successful !!!</p>
+</div>
+</div>
+<div class="popup__overlay">
+  <div class="popup" id="popupVid">
+    <a href="#contentBlock7" class="popup__close">X</a>
+    <iframe src="https://www.youtube.com/embed/TRGoy0XLrUA?showinfo=0&rel=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+	</div>
+</div>
+</div>
+<!--main container block ends-->
+<!--script container block-->
+<script type="text/javascript">
+  $(document).ready(function() {
+  var visibleSection = 1;
+  var delta = -1;
+  var scrollCount = 0;
+  var allowcall = true;
+  var shwCont = (window.location.href).split("?contentBlock")[1];
+  try{
+  if(((window.location.href).split("?contentBlock"))[1].trim()!="")
+		visibleSection = parseInt(((window.location.href).split("?contentBlock"))[1].trim());
+	}catch(e){}
+  if(shwCont!="" && shwCont !=1 && shwCont!=undefined)
+  {
+		$("#contentBlock1").hide();
+		$("#contentBlock"+shwCont).show();		
+		$("#btn1").removeClass("selectionPointer");
+			$("#btn"+shwCont).addClass("selectionPointer");
+			$("#menulink1").removeClass("selected");
+			$("#menulink"+shwCont).addClass("selected");
+		}
+    $('#descCarousel').carousel({
+      interval: false//20000
+    });
+
+function pageShift() {
+    var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+	var scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
+	var scrolledToBottom = (scrollTop + window.innerHeight) >= scrollHeight;
+	console.log("top---"+scrollTop+"   bottom---"+scrolledToBottom);
+	var pageToGo = 1;
+	visibleSection = parseInt(visibleSection);
+	if(scrollTop==0 && scrolledToBottom)
+	{
+	if(delta<0)
+		scrollTop = 1;
+	}
+//	if(scrollCount>=5){
+//	scrollCount=0;
+	if(scrollTop==0 && delta >0){
+		if(visibleSection==1)
+			pageToGo = $(".contentBlock").length;
+		else
+			pageToGo = visibleSection-1;
+		pageTransit(pageToGo);
+	}else
+	if(scrolledToBottom && delta<0){
+		if(visibleSection==$(".contentBlock").length)
+			pageToGo = 1;
+		else
+			pageToGo = visibleSection+1;
+		pageTransit(pageToGo);
+	}
+//	}
+//	else{
+//	if(scrollTop==0 || scrolledToBottom)
+//		scrollCount++;
+//	}
+
+}	
+$('html').on ('DOMMouseScroll', function (e) {
+ delta = e.originalEvent.detail;
+ pageShift();
+});
+$('html').on ('mousewheel', function (e) {
+   delta = e.originalEvent.wheelDelta;
+   if(allowcall){
+		allowcall = false;
+		pageShift();
+		setTimeout(function(){
+            allowcall = true;
+        }, 1000);
+   }
+});
+
+	
+	$("#sectionControl div").click(function(){
+		var sectionCount = this.id;
+		pageTransit(sectionCount);
+	});
+	
+	function pageTransit(sectionCount){
+	    sectionCount = sectionCount.toString();
+		$("#contentBlock"+visibleSection).css("z-index",10);	
+		sectionCount = sectionCount.replace("btn","");
+
+		if(sectionCount!=visibleSection){
+	if(sectionCount>visibleSection)	
+	{
+			$("#contentBlock"+sectionCount).css("z-index",1);
+			$("#contentBlock"+sectionCount).show();
+			var url = (window.location.href).split("?content");
+			
+			window.location.href = url[0] + "?contentBlock" + sectionCount;
+			
+			$("#sectionControl>ul>li>div.selectionPointer").removeClass("selectionPointer");
+			$("#btn"+visibleSection).removeClass("selectionPointer");
+			$("#btn"+sectionCount).addClass("selectionPointer");
+			$("#menulink"+visibleSection).removeClass("selected");
+			$("#menulink"+sectionCount).addClass("selected");
+			$("#contentBlock"+visibleSection).hide("slide", { direction: "left" }, 1000);
+			
+	}else{
+			$("#contentBlock"+sectionCount).show();
+			var url = (window.location.href).split("?");
+			window.location.href = url[0] + "?contentBlock" + sectionCount;
+			$("#sectionControl>ul>li>div.selectionPointer").removeClass("selectionPointer");
+			$("#btn"+visibleSection).removeClass("selectionPointer");
+			$("#btn"+sectionCount).addClass("selectionPointer");
+			$("#menulink"+visibleSection).removeClass("selected");
+			$("#menulink"+sectionCount).addClass("selected");
+			$("#contentBlock"+visibleSection).hide("slide", { direction: "left" }, 1000);
+			}
+			visibleSection = sectionCount;
+			}
+	}
+	
+	function callbackFunction() {
+	var imgDeg = getRotationDegrees($("#centerBlock img"));
+	console.log(imgDeg);
+	imgDeg = 360 - imgDeg;
+	switch (imgDeg) {
+	  case 0:
+		$("#lab2").slideUp();
+		$("#lab3").slideUp();
+		$("#lab4").slideUp();
+		$("#lab5").slideUp();
+		$("#lab6").slideUp();
+		$("#lab7").slideUp();
+		$("#lab1").slideDown();		
+		break;
+	  case 55:
+		$("#lab2").slideDown();
+		break;
+	  case 110:
+		 $("#lab3").slideDown();
+		break;
+	  case 165:
+		$("#lab4").slideDown();
+		break;
+	  case 220:
+		$("#lab5").slideDown();
+		break;
+	  case 275:
+		$("#lab6").slideDown();
+		break;
+	  case 330:
+		$("#lab7").slideDown();
+		break;
+	  case 360:
+	    $("#lab2").slideUp();
+		$("#lab3").slideUp();
+		$("#lab4").slideUp();
+		$("#lab5").slideUp();
+		$("#lab6").slideUp();
+		$("#lab7").slideUp();
+		$("#lab1").slideDown();		
+		break;
+	  default:
+		$("#lab1").slideUp();
+		$("#lab2").slideUp();
+		$("#lab3").slideUp();
+		$("#lab4").slideUp();
+		$("#lab5").slideUp();
+		$("#lab6").slideUp();
+		$("#lab7").slideUp();
+	}
+  setTimeout(callbackFunction, 1000);
+}
+callbackFunction();
+function getRotationDegrees(obj) {
+    var matrix = obj.css("-webkit-transform") ||
+    obj.css("-moz-transform")    ||
+    obj.css("-ms-transform")     ||
+    obj.css("-o-transform")      ||
+    obj.css("transform");
+    if(matrix !== 'none') {
+        var values = matrix.split('(')[1].split(')')[0].split(',');
+        var a = values[0];
+        var b = values[1];
+        var angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
+    } else { var angle = 0; }
+    return (angle < 0) ? angle + 360 : angle;
+}
+$('#facilitiesCarousel,#policiesCarousel,#feedbackCarousel').carousel({
+  interval: false
+})
+$('#teamCarousel').carousel({
+  interval: 3000
+})
+
+$('#facilitiesCarousel .item,#policiesCarousel .item,#teamCarousel .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+  
+  if (next.next().length>0) {
+    next.next().children(':first-child').clone().appendTo($(this));
+  }
+  else {
+  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+  }
+});
+$('#feedbackCarousel .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+});
+$("#leftClick").click(function(){
+	$("#leftClickControl").click();
+});
+$("#rightClick").click(function(){
+	$("#rightClickControl").click();
+});
+$("#pleftClick").click(function(){
+	$("#pleftClickControl").click();
+});
+$("#prightClick").click(function(){
+	$("#prightClickControl").click();
+});
+$("#fleftClick").click(function(){
+	$("#fleftClickControl").click();
+});
+$("#frightClick").click(function(){
+	$("#frightClickControl").click();
+});
+$("#tleftClick").click(function(){
+	$("#tleftClickControl").click();
+});
+$("#trightClick").click(function(){
+	$("#trightClickControl").click();
+});
+
+$("#gallerycontrol div").click(function(){
+	
+	if(!$("#"+this.id).hasClass("selected")){
+	var sid = (this.id).replace("f_","");
+	$("#"+this.id).siblings().removeClass("selected");
+	$("#"+this.id).addClass("selected");
+	
+	$('style:not(#mainStyle)').remove();
+	$("#gallerysite .col-md-4").siblings().removeClass("gall1 gall2 gall3 gall4 gall5 gall6");
+	
+	if($('#gallerysite .col-md-4.active').length==0)
+	$('#gallerysite .col-md-4').each(function(){
+					console.log("id----"+this.id+"  x-----"+$("#"+this.id).offset().left+"  y-----"+$("#"+this.id).offset().top);
+					$("#"+this.id).attr("data-org-y",$("#"+this.id).offset().top);			
+					$("#"+this.id).attr("data-org-x",$("#"+this.id).offset().left);				
+				});
+	
+	$('#gallerysite .col-md-4').each(function(){		
+		if(sid.toLowerCase() != "all"){
+		if(($(this).attr("data-filter").toLowerCase()).indexOf(sid.toLowerCase()) == -1){
+			$("#"+this.id).addClass("active");		
+		}else{
+			$("#"+this.id).removeClass("active");
+		}
+		}else{
+			$("#"+this.id).removeClass("active");
+			$("#"+this.id).siblings().removeClass("gall1 gall2 gall3 gall4 gall5 gall6");
+		}
+	});
+	
+	var lastVcount = 0;
+	var mCount = 0;
+	
+	if($('#gallerysite .col-md-4.active').length!=0)
+	$('#gallerysite .col-md-4:not(.active)').each(function(){
+		var vId = this.id;
+		var currVcount = parseInt(this.id.replace("gall",""));
+		
+		if(currVcount!=1){
+			if(currVcount-lastVcount>1 || mCount !=0){
+				mCount = mCount + currVcount-lastVcount -1;
+				if(mCount>0){
+				
+						posX = -($("#gall"+currVcount).attr("data-org-x") - $("#gall"+(currVcount-mCount)).attr("data-org-x"));
+						posY = -($("#gall"+currVcount).attr("data-org-y") - $("#gall"+(currVcount-mCount)).attr("data-org-y"));						
+
+						var styles = "#gallerysite .col-md-4.gall"+currVcount+"{ -webkit-transform:scale(1,1) translate("+posX+"px,"+posY+"px);-ms-transform:scale(1,1) translate("+posX+"px,"+posY+"px);-moz-transform:scale(1,1) translate("+posX+"px,"+posY+"px);-o-transform:scale(1,1) translate("+posX+"px,"+posY+"px);transform:scale(1,1) translate("+posX+"px,"+posY+"px);}"; 
+						$(".gall"+currVcount).remove();
+						 var css = document.createElement('style');
+						 var cnme="gall"+currVcount;
+						 css.type = 'text/css'; 
+						 css.className = "gall"+currVcount;
+						 if (css.styleSheet)  
+								css.styleSheet.cssText = styles; 
+							else  
+								css.appendChild(document.createTextNode(styles)); 
+							 document.getElementsByTagName("head")[0].appendChild(css); 
+						
+						$("#gall"+currVcount).css({transform:"translate("+posX+"px"+posY+"px)"});
+						
+						$("#gall"+currVcount).addClass("gall"+currVcount);
+						console.log("x----"+posX+"  y------"+posY);							
+				}
+				console.log(this.id);
+				console.log(mCount);
+			}
+		}	
+		lastVcount = currVcount;
+	});
+
+	}
+});	
+
+var modal = document.getElementById("successmsg");
+
+var btn = document.getElementById("submitform");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}	
+
+var p = $(".popup__overlay");
+
+$("#videopopup").click(function() {
+  p.css("display", "block");
+});
+p.click(function(event) {
+  e = event || window.event;
+  if (e.target == this) {
+    $(p).css("display", "none");
+  }
+});
+$(".popup__close").click(function() {
+  p.css("display", "none");
+});
+
+function toggleVideo(state) {
+  var div = document.getElementById("popupVid");
+  var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+  func = state == "hide" ? "pauseVideo" : "playVideo";
+  iframe.postMessage(
+    '{"event":"command","func":"' + func + '","args":""}',
+    "*"
+  );
+}
+
+$("#videopopup").click(function() {
+  p.css("visibility", "visible").css("opacity", "1");
+});
+
+p.click(function(event) {
+  e = event || window.event;
+  if (e.target == this) {
+    $(p)
+      .css("visibility", "hidden")
+      .css("opacity", "0");
+    toggleVideo("hide");
+  }
+});
+
+$(".popup__close").click(function() {
+  p.css("visibility", "hidden").css("opacity", "0");
+  toggleVideo("hide");
+});
+var _CURRENT_ANGLE = 0;
+
+
+});
+
+</script>
+<!--script container block ends-->
