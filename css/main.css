@@ -124,22 +124,24 @@ Author URL: http://shapebootstrap.net
 }
 
 .team-member p {
-    max-height: 70px;
+    max-height: 0;
+    opacity: 0;
     overflow: hidden;
-    -webkit-transition: max-height 1s ease-out;
-    -moz-transition: max-height 1s ease-out;
-    -ms-transition: max-height 1s ease-out;
-    -o-transition: max-height 1s ease-out;
-    transition: max-height 1s ease-out;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease;
 }
 
 .team-member:hover p {
-    max-height: 1000px;
-    -webkit-transition: max-height 1s ease-in;
-    -moz-transition: max-height 1s ease-in;
-    -ms-transition: max-height 1s ease-in;
-    -o-transition: max-height 1s ease-in;
-    transition: max-height 1s ease-in;
+    max-height: 200px;
+    opacity: 1;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease;
 }
 
 

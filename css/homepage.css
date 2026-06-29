@@ -646,7 +646,17 @@ body.homepage,
 }
 .homepage #services .container { position: relative; z-index: 1; }
 
-/* service card */
+/* service card equal-height rows */
+.homepage #services .features {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+.homepage #services .features > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
 .homepage #services .media.service-box {
   background: #ffffff;
   border: 1.5px solid var(--border);
@@ -656,6 +666,7 @@ body.homepage,
   margin: 0 0 24px;
   display: flex;
   align-items: flex-start;
+  flex: 1;
   gap: 0;
   transition: all var(--dur) var(--ease-out);
   position: relative;
@@ -785,7 +796,9 @@ body.homepage,
 
 .homepage #work-process .icon-circle {
   width: 90px; height: 90px;
-  line-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 2px solid rgba(69,174,214,0.22);
   background: linear-gradient(145deg, rgba(69,174,214,0.08) 0%, #ffffff 100%);
   color: var(--primary);
@@ -1260,8 +1273,19 @@ body.homepage,
   color: var(--text-b);
   font-size: 13px;
   line-height: 1.75;
-  padding: 14px 20px;
+  padding: 0 20px;
   margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: scale(0.97);
+  transition: all 0.35s ease;
+}
+.homepage #meet-team .team-member:hover p {
+  max-height: 200px;
+  opacity: 1;
+  padding: 14px 20px;
+  transform: scale(1);
 }
 .homepage #meet-team .divider {
   background-image: linear-gradient(90deg, transparent, var(--border-strong), transparent);
@@ -1313,12 +1337,25 @@ body.homepage,
   background: #fff !important;
   padding: 80px 0 !important;
 }
+.homepage #contact .contact-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.homepage #contact .contact-col {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .homepage #contact .ratio-16x9 {
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-md);
   border: 1.5px solid var(--border);
   height: 440px;
+  flex: 1;
 }
 .homepage #contact .ratio-16x9 iframe {
   width: 100%;
@@ -1331,7 +1368,7 @@ body.homepage,
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-card);
   padding: 44px 40px;
-  height: 440px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
